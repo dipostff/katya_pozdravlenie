@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a1020" />
+  <title>Сообщение для Кати</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-warm">
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <!-- Stage 1: уведомление -->
+  <section id="stage-intro" class="stage stage--intro is-active">
+    <div class="intro-card">
+      <p class="intro-eyebrow">Новое</p>
+      <h1 class="intro-title">Вам пришло сообщение</h1>
+      <p class="intro-sub">От человека, которому ты очень дорога</p>
+      <button type="button" id="btn-read" class="btn btn--warm">Прочитать</button>
+    </div>
+  </section>
+
+  <!-- Stage 2: письмо -->
+  <section id="stage-letter" class="stage stage--letter" hidden>
+    <div class="letter-shell">
+      <article class="letter" aria-live="polite">
+        <div id="letter-text" class="letter-text"></div>
+        <span id="caret" class="caret" aria-hidden="true"></span>
+      </article>
+    </div>
+
+    <div id="after-letter" class="after-letter" hidden>
+      <p class="after-letter-text">Это ещё не всё</p>
+      <button type="button" id="btn-continue" class="btn btn--warm">Продолжить</button>
+    </div>
+  </section>
+
+  <!-- Stage 3: финал -->
+  <section id="stage-finale" class="stage stage--finale" hidden>
+    <canvas id="fireworks" class="fireworks" aria-hidden="true"></canvas>
+
+    <div class="finale-scene">
+      <div id="heart-field" class="heart-field" aria-hidden="true"></div>
+      <div class="photo-wrap">
+        <img
+          src="katya_foto.jpg"
+          alt="Катя"
+          class="photo"
+          width="480"
+          height="480"
+        />
+      </div>
+      <h2 id="bday-title" class="bday-title">С днём рождения любимая &lt;3&lt;3&lt;3&lt;3&lt;3</h2>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
